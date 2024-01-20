@@ -1,3 +1,4 @@
+
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
@@ -75,4 +76,11 @@ dependencies {
     implementation ("com.squareup.retrofit2:retrofit:2.9.0")
     //gson
     implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
+
+    // room
+    val room_version = "2.6.1"
+
+    implementation("androidx.room:room-runtime:$room_version")
+    annotationProcessor("androidx.room:room-compiler:$room_version")
+
 }

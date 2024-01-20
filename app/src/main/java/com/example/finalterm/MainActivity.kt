@@ -98,10 +98,10 @@ class MainActivity : ComponentActivity() {
                     }
                 )
                 {
-                    Navigation()
+//                    Navigation()
 //                    SettingScreen()
 //                    HomeScreen()
-//                    ProfileScreen()
+                    ProfileScreen()
 
                 }
 //                HomeScreen()

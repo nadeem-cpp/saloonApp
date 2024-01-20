@@ -8,6 +8,7 @@ import retrofit2.http.Field
 import retrofit2.http.FormUrlEncoded
 import retrofit2.http.GET
 import retrofit2.http.POST
+import retrofit2.http.PUT
 import retrofit2.http.Query
 import java.util.Date
 
@@ -16,25 +17,11 @@ data class User(
     val password: String
 )
 
-data class Appointment(
-    val title: String,
-    val date: String,
-    val hairSpecialist: String,
-    val appointmentDate: String,
-    val price: Double
-)
-
-data class HairStylist(
-    val name: String,
-    val rating: Int,
-    val contact: String
-)
-
-
-
 interface ApiService {
     @POST("authenticate")
     fun login(@Body user: User): Call<Boolean>
+    @PUT("authenticate")
+    fun updatePassword(@Body user: User): Call<Boolean>
 
     @POST("signup")
     fun signup(@Body user: User): Call<Int> // return developer defined code in response
